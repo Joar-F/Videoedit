@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="sv">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Videoredigering Proffs</title>
+   <style>
+     :root {
+       --color-bg: #1b1d23;
+       --color-section: #1e293b;
+       --color-primary: #e7e7e7;
+       --color-text: #f1f5f9;
+       --color-muted: #94a3b8;
+       --color-input: #334155;
+       --radius: 12px;
+       --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+     }
+
+
+     body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-image: url('bakgrund.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+
+     .container {
+       width: 90%;
+       max-width: 960px;
+       margin: 0 auto;
+     }
+
+
+     header {
+       background-color: var(--color-section);
+       padding: 2rem 0;
+       text-align: center;
+       box-shadow: var(--shadow);
+     }
+
+
+     .logo {
+       font-size: 2.rem;
+       font-weight: bold;
+       color: var(--color-primary);
+     }
+
+
+     nav ul {
+       list-style: none;
+       display: flex;
+       justify-content: center;
+       gap: 2rem;
+       padding: 0;
+       margin-top: 1rem;
+     }
+
+
+     nav a {
+       color: var(--color-text);
+       text-decoration: none;
+       font-weight: 500;
+       transition: color 0.3s ease;
+     }
+
+
+     nav a:hover {
+       color: var(--color-primary);
+     }
+
+
+     main {
+       padding: 3rem 0;
+     }
+     
+
+
+     .section {
+       background-color: var(--color-section);
+       padding: 2rem;
+       border-radius: var(--radius);
+       box-shadow: var(--shadow);
+       margin-bottom: 2rem;
+     }
+
+
+     .section h2 {
+       color: var(--color-text);
+       margin-bottom: 1rem;
+     }
+
+
+     form {
+       display: flex;
+       flex-direction: column;
+       gap: 1rem;
+     }
+
+
+     input,
+     textarea {
+       background-color: var(--color-input);
+       color: var(--color-text);
+       border: none;
+       padding: 0.9rem 1rem;
+       font-size: 1rem;
+       border-radius: var(--radius);
+     }
+
+
+     button {
+       background-color: var(--color-primary);
+       color: #fff;
+       padding: 0.9rem 1rem;
+       font-weight: bold;
+       border: none;
+       border-radius: var(--radius);
+       cursor: pointer;
+       transition: background-color 0.3s;
+     }
+
+
+     button:hover {
+       background-color: #1d4ed8;
+     }
+
+
+     #confirmation-message {
+       margin-top: 1rem;
+       color: var(--color-primary);
+       font-weight: 600;
+       display: none;
+     }
+
+
+     footer {
+       background-color: var(--color-section);
+       text-align: center;
+       padding: 2rem 0;
+       color: var(--color-muted);
+     }
+     html {
+  scroll-behavior: smooth;
+}
+   </style>
+ </head>
+ <body>
+   <header>
+     <div class="container">
+       <h1 class="logo">Videoredigering</h1>
+       <nav>
+         <ul>
+           <li><a href="#about">Om Oss</a></li>
+           <li><a href="#contact">Kontakt</a></li>
+           <li><a href="#booking">Boka Möte</a></li>
+           <li><a href="#Feedback">Feedback</a></li>
+         </ul>
+       </nav>
+     </div>
+   </header>
+
+
+   <main class="container">
+     <section id="about" class="section">
+       <h2>Om Oss</h2>
+       <p>Vi erbjuder professionella videoredigeringstjänster för företag och privatpersoner. Vårt fokus ligger på att skapa innehåll som engagerar – perfekt för sociala medier, reklam och mer.</p>
+     </section>
+
+
+     <section id="contact" class="section">
+       <h2>Kontakt</h2>
+       <ul>
+         <li>Email: <a href="mailto:joar.flood0@gmail.com">joar.flood0@gmail.com</a></li>
+         <li>Telefon: <a href="tel:+46762734307">+46 76 273 43 07</a></li>
+       </ul>
+     </section>
+
+
+     <section id="booking" class="section">
+       <h2>Boka Möte</h2>
+       <form id="booking-form">
+         <input type="text" name="user_name" placeholder="Ditt namn" required />
+         <input type="email" name="user_email" placeholder="Din e-post" required />
+         <input type="date" name="booking_date" required />
+         <textarea name="message" placeholder="Meddelande (valfritt)"></textarea>
+         <button type="submit">Skicka bokning</button>
+       </form>
+       <p id="confirmation-message" style="margin-top: 1rem; color: #ffffff; display: none;"></p>
+     </section>
+    
+    
+
+     <section id="Feedback" class="section">
+      <div class="form-container"> </div>
+      <h2>Feedback</h2>
+      <p class="mb-6">Tack för att du jobbat med mig! Dina svar hjälper mig att bli ännu bättre och skapa innehåll som passar just er stil och behov.</p>
+    
+      <form id="feedback-form">
+        <label>🔹 1. Vad heter du / vad heter er butik/företag?
+          <input type="text" name="user_name" required class="w-full border p-2 rounded" />
+        </label>
+    
+        <label>🔹 2. Hur nöjd är du med min tjänst?
+          <select name="satisfaction" required class="w-full border p-2 rounded">
+            <option value="1">Dåligt (1)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">Mycket bra (5)</option>
+          </select>
+        </label>
+    
+        <label>🔹 3. Vad tyckte du särskilt om?
+          <textarea name="liked" required class="w-full border p-2 rounded"></textarea>
+        </label>
+    
+        <label>🔹 4. Finns det något jag kan förbättra till nästa gång?
+          <textarea name="improvements" class="w-full border p-2 rounded"></textarea>
+        </label>
+    
+        <label>🔹 5. Vill du ha hjälp med fler videos i framtiden?
+          <select name="more_videos" required class="w-full border p-2 rounded">
+            <option value="Ja, gärna!">Ja, gärna!</option>
+            <option value="Kanske">Kanske – återkommer</option>
+            <option value="Nej">Nej, inte just nu</option>
+          </select>
+        </label>
+    
+        <button type="submit" class="bg-black text-white px-4 py-2 rounded">Skicka Feedback</button>
+    
+        <p id="feedback-confirmation" class="text-green-600 font-semibold mt-4 hidden"></p>
+      </form>
+    </section>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+     <script src="script.js"></script>
+    
+    
+    
+   </main>
+
+
+   <footer>
+     <p>&copy; 2025 Videoredigering Proffs. Alla rättigheter förbehållna.</p>
+   </footer>
+
+
+   <script>
+   
+emailjs.init("xMAXP3Xz-KK5IIGQt");
+
+document.getElementById("booking-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs.sendForm("service_fx6ik14", "template_v1pp2yj", this)
+    .then(() => {
+      const msg = document.getElementById("confirmation-message");
+      msg.textContent = "Tack för din bokning! Vi kontaktar dig inom kort.";
+      msg.style.display = "block";
+      msg.style.color = "#ffffff";
+      e.target.reset();
+    })
+    .catch((error) => {
+      const msg = document.getElementById("confirmation-message");
+      msg.textContent = "Ett fel uppstod. Försök igen.";
+      msg.style.display = "block";
+      msg.style.color = "red";
+      console.error("EmailJS Error:", error);
+    });
+});
+
+   </script>
+   <script>
+    document.getElementById('feedback-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_fx6ik14', 'template_y3e5p1g', this, 'xMAXP3Xz-KK5IIGQt')
+        .then(function () {
+          document.getElementById('feedback-confirmation').textContent = 'Tack för din feedback!';
+          document.getElementById('feedback-confirmation').classList.remove('hidden');
+          e.target.reset();
+        }, function (error) {
+          alert('Ett fel uppstod. Försök igen!');
+          console.error('EmailJS-fel:', error);
+        });
+    });
+  </script>
+  
+ </body>
+</html>
